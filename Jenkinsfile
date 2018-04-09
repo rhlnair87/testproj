@@ -11,6 +11,11 @@ pipeline {
         stage('db testing') {
           steps {
             echo 'This is database testing'
+          post {
+            success {
+              echo "SUCCESS"
+            }
+          }
           }
         }
         stage('unit testing') {
