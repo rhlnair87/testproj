@@ -10,10 +10,10 @@ pipeline {
         }
         stage('db testing') {
           steps {
-            echosadsad 'This is database testing'
+            echo 'This is database testing'
           post {
-            failure {
-              echo "FAIL"
+            always {
+              echo 'all is well!!'
             }
           }
           }
